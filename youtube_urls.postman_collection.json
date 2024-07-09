@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "af421312-4aaf-467b-b47d-b07595ef6ac3",
+		"name": "youtube_urls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29857012"
+	},
+	"item": [
+		{
+			"name": "https://15e6-125-18-168-34.ngrok-free.app/add_url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\" : \"https://www.youtube.com/watch?v=Ul2G-owYoHM\"\r\n}\r\n//  \"https://www.youtube.com/watch?v=cjLO-jySDNs\",\r\n//  \"https://www.youtube.com/watch?v=Ul2G-owYoHM\"\r\n// https://www.youtube.com/watch?v=vacGRuHDtO0\r\n// https://www.youtube.com/watch?v=bFbGe5c_JVM",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://15e6-125-18-168-34.ngrok-free.app/add_url",
+					"protocol": "https",
+					"host": [
+						"15e6-125-18-168-34",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"add_url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://15e6-125-18-168-34.ngrok-free.app/fetch_video_info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://15e6-125-18-168-34.ngrok-free.app/fetch_video_info",
+					"protocol": "https",
+					"host": [
+						"15e6-125-18-168-34",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"fetch_video_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://15e6-125-18-168-34.ngrok-free.app/search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search_term\": \"india\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://15e6-125-18-168-34.ngrok-free.app/search",
+					"protocol": "https",
+					"host": [
+						"15e6-125-18-168-34",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://15e6-125-18-168-34.ngrok-free.app/rm_url",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://www.youtube.com/watch?v=bFbGe5c_JVM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://15e6-125-18-168-34.ngrok-free.app/rm_url",
+					"protocol": "https",
+					"host": [
+						"15e6-125-18-168-34",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"rm_url"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
