@@ -42,7 +42,7 @@ def init_db():
                      FOREIGN KEY (url_id) REFERENCES urls(id) ON DELETE CASCADE)''')
     conn.commit()
     conn.close()
-# Added the commit
+
 init_db()
 
 def extract_video_id(url):
