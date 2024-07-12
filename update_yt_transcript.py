@@ -42,7 +42,7 @@ def init_db():
                      FOREIGN KEY (url_id) REFERENCES urls(id) ON DELETE CASCADE)''')
     conn.commit()
     conn.close()
-
+ 
 init_db()
 
 def extract_video_id(url):
@@ -285,28 +285,7 @@ def rm_url(id):
         return jsonify({"response":"Removed video successfully"})
     except Exception as e:
         logging.error(f"Error removing video: {str(e)}")
-        return jsonify({"error": e})    
-# @app.route('/rm_url/<int:id>', methods=["DELETE"])
-# def rm_url(id):  
-#     try:  
-#         conn = get_db_connection()
-#         cursor = conn.cursor()
 
-#         # Delete from the urls table
-#         cursor.execute('DELETE FROM urls WHERE id = ?', (id,))
-        
-#         if cursor.rowcount == 0:
-#             conn.close()
-#             logging.warning(f"Video not found in database: {id}")
-#             return jsonify({"response":"Video is not in the database"}), 404
-        
-#         conn.commit()
-#         conn.close()
-#         logging.info(f"Removed video successfully: {id}")
-#         return jsonify({"response":"Removed video successfully"})
-#     except Exception as e:
-#         logging.error(f"Error removing video: {str(e)}")
-#         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000, host='0.0.0.0')
